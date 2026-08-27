@@ -6,7 +6,7 @@ A modern, responsive, and user-friendly school website developed for **G.L.I.E.R
 
 ## 🌐 Live Demo
 
-**GitHub Repository:** https://github.com/Akshat77O/GLIER
+**GitHub Repository:** https://github.com/krishsharma06666/GLIER.git
 
 ---
 
@@ -57,7 +57,7 @@ GLIER/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/Akshat77O/GLIER.git
+git clone https://github.com/krishsharma06666/GLIER.git
 cd GLIER
 ```
 
