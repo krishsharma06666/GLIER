@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&family=Fredoka+One&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 244 67% 97%; 
+    --foreground: 155 25% 12%;
+
+    --card: 140 30% 99%; 
+    --card-foreground: 155 25% 12%;
+
+    --popover: 140 30% 99%; 
+    --popover-foreground: 155 25% 12%;
+
+    --primary: 145 42% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 60 30% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 140 12% 96%;
+    --muted-foreground: 155 8% 45%;
+
+    --accent: 145 42% 90%;
+    --accent-foreground: 155 25% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 140 12% 92%;
+    --input: 140 12% 92%;
+    --ring: 145 42% 38%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 155 25% 8%;
+    --foreground: 140 40% 98%;
+
+    --card: 155 25% 10%;
+    --card-foreground: 140 40% 98%;
+
+    --popover: 155 25% 10%;
+    --popover-foreground: 140 40% 98%;
+
+    --primary: 145 42% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 60 30% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 155 32.6% 17.5%;
+    --muted-foreground: 140 20.2% 65.1%;
+
+    --accent: 155 25% 16%;
+    --accent-foreground: 140 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 140 40% 98%;
+
+    --border: 155 32.6% 17.5%;
+    --input: 155 32.6% 17.5%;
+    --ring: 145 42% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans; /* font-sans will now be Nunito */
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight; /* font-serif will now be Fredoka One */
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl font-serif font-medium relative mb-8 inline-block; /* Will use Fredoka One */
+  }
+  
+  .section-title::after {
+    content: "";
+    @apply absolute left-0 -bottom-2 h-1 w-1/2 bg-primary rounded-full;
+  }
+  
+  .section-subtitle {
+    @apply text-sm uppercase tracking-wider text-primary font-medium mb-2; /* Will use Nunito (body font) */
+  }
+
+  .leaf-bullet { /* Will use Nunito */
+    @apply before:content-[''] before:w-2 before:h-2 before:bg-primary/50 before:rounded-full before:inline-block before:mr-2;
+  }
+
+  .nature-card { /* Content text will use Nunito */
+    @apply bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/30;
+  }
+
+  .btn-primary { /* Button text will use Nunito */
+    @apply px-6 py-3 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors duration-200 font-medium shadow-sm hover:shadow;
+  }
+
+  .btn-outline { /* Button text will use Nunito */
+    @apply px-6 py-3 bg-transparent border border-primary text-primary rounded-md hover:bg-primary/10 transition-colors duration-200 font-medium;
+  }
+}
